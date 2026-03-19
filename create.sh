@@ -1,4 +1,5 @@
 #!/bin/bash
+export DEBIAN_FRONTEND=noninteractive
 DOMAIN=$1
 EMAIL=$2
 AUTH_URL=$3
