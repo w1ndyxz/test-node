@@ -5,7 +5,7 @@ AUTH_URL=$3
 SALAMANDER_PASS=$4
 STATS_PASS=$5
 
-sudo apt update && sudo apt upgrade -y
+sudo apt update
 sudo apt install certbot -y
 
 sudo certbot certonly --standalone -d "$DOMAIN" --email "$EMAIL" --agree-tos --no-eff-email --non-interactive
