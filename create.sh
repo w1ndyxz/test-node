@@ -9,7 +9,7 @@ STATS_PASS=$5
 sudo apt update
 sudo apt install certbot -y
 
-sudo certbot certonly --standalone -d "$DOMAIN" --email "$EMAIL" --agree-tos --no-eff-email --non-interactive
+sudo certbot certonly --standalone -d "$DOMAIN" --email "$EMAIL" --agree-tos --no-eff-email --non-interactive --deploy-hook "systemctl restart hysteria-server.service"
 
 bash <(curl -fsSL https://get.hy2.sh/)
 
